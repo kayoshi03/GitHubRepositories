@@ -2,7 +2,7 @@ export interface ISearchType {
     //Запрос
     searchValue: string,
     //Результат запроса
-    results: [],
+    results: object,
     //Статус запроса
     status: "idle" | "loading" | "succeeded" | "failed",
     //Ошибка
