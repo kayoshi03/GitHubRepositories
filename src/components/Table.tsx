@@ -1,10 +1,9 @@
 import {DataGrid, GridColDef} from "@mui/x-data-grid";
 import {Box} from "@mui/material";
-import {useDispatch, useSelector} from "react-redux";
 import {format} from "date-fns";
 import {fetchLanguages, setDescription} from "../redux/slice/DescriptionSlice.ts";
 import {ISearchType} from "../type/search.type.ts";
-import {AppDispatch, RootState} from "../redux/store.ts";
+import {useAppDispatch, useAppSelector} from "../hook/hook.ts";
 
 //Настройка колонок
 const columns: GridColDef[] = [
@@ -18,8 +17,8 @@ const columns: GridColDef[] = [
 
 export const Table = () => {
     //Получение данных
-    const search:ISearchType = useSelector(state => state.search)<RootState>
-    const dispatch = useDispatch()<AppDispatch>
+    const search:ISearchType = useAppSelector(state => state.search)
+    const dispatch = useAppDispatch()
     return (
         <Box height={500} mt={"24px"}>
             {/*Инициализация таблицы*/}

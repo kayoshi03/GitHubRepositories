@@ -1,7 +1,7 @@
 import {Box,Typography} from "@mui/material";
 
 //Вывод ошибки
-export const Error = ({error}) => {
+export const Error = ({error}:any) => {
     return(
         <Box sx={{
             width: "100%",

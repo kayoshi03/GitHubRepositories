@@ -6,7 +6,7 @@ export interface IDescriptionType {
     //Ссылка на остальные языки
     languages_url?: string,
     //Остальные языки
-    languages?: object | null
+    languages?: object | null | undefined
     //Количество звезд
     stars?: number,
     //Лицензия, если она есть

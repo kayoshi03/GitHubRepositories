@@ -4,10 +4,8 @@ import {LanguagesList} from "./LanguagesList.tsx";
 import {StarsCount} from "./StarsCount.tsx";
 import {MainLanguage} from "./MainLanguage.tsx";
 import {Name} from "./Name.tsx";
-import {IDescriptionType} from "../type/description.type.ts";
-import React from "react";
 
-export const Description = ({description}:IDescriptionType) => {
+export const Description = ({description}:any) => {
 
     return (
         <Box

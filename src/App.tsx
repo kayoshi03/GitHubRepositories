@@ -2,15 +2,15 @@ import {Header} from "./components/Header.tsx";
 import {HelloPage} from "./components/HelloPage.tsx";
 import {Footer} from "./components/Footer.tsx";
 import {Main} from "./components/Main.tsx";
-import {useSelector} from "react-redux";
 import {Loader} from "./components/Loader.tsx";
 import {Error} from "./components/Error.tsx";
-import {RootState} from "./redux/store.ts";
+import {ISearchType} from "./type/search.type.ts";
+import {useAppSelector} from "./hook/hook.ts";
 
 //Вход программы
 function App() {
     //Получения статуса
-    const search = useSelector(state => state.search)<RootState>
+    const search:ISearchType = useAppSelector(state => state.search)
   return (
     <>
         {/*Шапка*/}

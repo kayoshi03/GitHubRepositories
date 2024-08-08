@@ -16,7 +16,7 @@ const initialState:ISearchType = {
 //Запрос на получение репозитерий по запросу
 export const fetchSearch:any = createAsyncThunk(
     "search/fetch",
-    async(_,{ getState }) => {
+    async(_,{ getState }:any) => {
         try {
             const {searchValue} = getState().search
             const res = await API.get(`/search/repositories?q=${searchValue}&per_page=${PER_PAGE}`)

@@ -12,6 +12,7 @@ export const LanguagesList:React.FC<IDescriptionType> = ({languages}) => {
             flexWrap: "wrap"
         }}>
             {
+                languages == null || undefined ? "" :
                 //Делаем из обьекта в массив состоящий из ключей обьектов, тем самым получаем массив языков
                 Object.keys(languages).map((item, index) => (
                     <LanguageItem key={index} item={item}/>

@@ -9,7 +9,7 @@ const initialState:IDescriptionType = {
 
 export const fetchLanguages:any = createAsyncThunk(
     "languages/fetch",
-    async(_,{ getState }) => {
+    async(_,{ getState }:any) => {
         try {
             const {languages_url} = getState().description
             const res = await API.get(languages_url)
