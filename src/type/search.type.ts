@@ -1,5 +1,3 @@
-import {IDescriptionType} from "./description.type.ts";
-
 export interface ISearchType {
     //Запрос
     searchValue: string,

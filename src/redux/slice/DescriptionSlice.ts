@@ -42,7 +42,7 @@ const DescriptionSlice = createSlice({
                 state.status = "succeeded"
                 state.languages = action.payload
             })
-            .addCase(fetchLanguages.rejected, (state:IDescriptionType, action) => {
+            .addCase(fetchLanguages.rejected, (state:IDescriptionType) => {
                 state.status = "failed"
             })
     }
