@@ -1,7 +1,6 @@
 import {Button, TextField} from "@mui/material";
 import {fetchSearch, setSearchValue} from "../redux/slice/SearchSlice.ts";
-import {ISearchType} from "../type/search.type.ts";
-import {useAppDispatch, useAppSelector} from "../hook/hook.ts";
+import {useAppDispatch} from "../hook/hook.ts";
 import {useState} from "react";
 
 export const Header = () => {
